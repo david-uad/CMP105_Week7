@@ -23,7 +23,12 @@ in a nullptr exception being thrown. It was solved by again reading through the 
 exception was occurring and so it would help to talk through the steps the program was making around manipulating the Bullet object.
 
 
-Code 7_4: What was wrong? How did you fix it? and cruically what tools and techniques did you use to find it?
+Code 7_4:
+
+The issue here was that when a bullet was spawned, a bullet object was created inside a function, and the address returned to the player's bullet pointer,
+however the pointer would now point to empty memory as the bullet object is destroyed on exiting the function, creating a memory access violation error.
+This was tricky to diagnose,  but was solved using a combination of the debug output, breakpoints, annd stepping through the code and watching the values
+of objects such at the bullet pointer or the newBullet object as they were manipulated.
 
 
 Code 7_5: What was wrong? How did you fix it? and cruically what tools and techniques did you use to find it?
