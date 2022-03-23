@@ -18,7 +18,9 @@ a bug.
 
 Code 7_3:
 
-
+Here the error was occurring because inside the player class the pointer to the Bullet object was never made to point to a bullet object in memory, resulting
+in a nullptr exception being thrown. It was solved by again reading through the debug output, but also some rubber duck debugging when it was not clear why the 
+exception was occurring and so it would help to talk through the steps the program was making around manipulating the Bullet object.
 
 
 Code 7_4: What was wrong? How did you fix it? and cruically what tools and techniques did you use to find it?

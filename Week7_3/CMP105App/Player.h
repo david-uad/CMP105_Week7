@@ -16,5 +16,5 @@ public:
 	};
 
 private:
-	Bullet* bullet;
+	Bullet* bullet = new Bullet;
 };
