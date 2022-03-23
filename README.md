@@ -35,7 +35,10 @@ Code 7_5: What was wrong? How did you fix it? and cruically what tools and techn
 
 
 
-Code 7_6: What was wrong? How did you fix it? and cruically what tools and techniques did you use to find it?
+Code 7_6:
+
+The issue here was the use of <= operators instead of < operators when iterating through the array of Bits. This was found and solved using the debug out,
+breakpoints and again stepping through and watching the value of the iterator i.
 
 
 Code 7_7: What was wrong? How did you fix it? and cruically what tools and techniques did you use to find it?
