@@ -41,5 +41,9 @@ The issue here was the use of <= operators instead of < operators when iterating
 breakpoints and again stepping through and watching the value of the iterator i.
 
 
-Code 7_7: What was wrong? How did you fix it? and cruically what tools and techniques did you use to find it?
+Code 7_7:
+
+Here Gameobject go was declared twice, which clearly led to the issue which was that it was not drawn to the screen. Attempts to find the cause using 
+breakpoints and watch variables were mostly fruitless, and so rubber duck debugging and walking through the code which initialised the Gameobject object 
+was the eventual way to identify and solve the issue.
 
