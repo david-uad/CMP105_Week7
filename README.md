@@ -34,7 +34,9 @@ of objects such at the bullet pointer or the newBullet object as they were manip
 Code 7_5:
 
 This is clearly an issue of circular dependancy as the compiler is throwing strange errors, such as beleiving that a type identifier is undefined when the 
-correct header has been included, and looking further one can see that both the Player.h and Companion.h include eachother. Solving the issue is another matter.
+correct header has been included, and looking further one can see that both the Player.h and Companion.h include eachother. Solving the issue required rewriting
+the way the player and companion classes interacted so that both did not depend upon each other. This required every available method, but mostly rubber duck debugging,
+as the best way to work out the source of the actual errors was to step through the way the preprocessor was handling compilation and work out where it was getting stuck.
 
 
 Code 7_6:

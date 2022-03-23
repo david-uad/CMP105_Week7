@@ -1,5 +1,6 @@
 #include "Companion.h"
 
+
 Companion::Companion()
 {
 	setPosition(500, 500);
@@ -16,9 +17,4 @@ Companion::~Companion()
 void Companion::update(float dt)
 {
 	move(velocity*dt);
-}
-
-void Companion::moveToPlayer(Player* p)
-{
-	setPosition(p->getPosition());
 }
