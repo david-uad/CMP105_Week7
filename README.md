@@ -31,8 +31,10 @@ This was tricky to diagnose,  but was solved using a combination of the debug ou
 of objects such at the bullet pointer or the newBullet object as they were manipulated.
 
 
-Code 7_5: What was wrong? How did you fix it? and cruically what tools and techniques did you use to find it?
+Code 7_5:
 
+This is clearly an issue of circular dependancy as the compiler is throwing strange errors, such as beleiving that a type identifier is undefined when the 
+correct header has been included, and looking further one can see that both the Player.h and Companion.h include eachother. Solving the issue is another matter.
 
 
 Code 7_6:
